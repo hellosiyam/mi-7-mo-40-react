@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Countrie.css'
-const Countrie = ({countrie, markHandel}) => {
+const Countrie = ({countrie, markHandel, flagHandel}) => {
     
     const [visited , setVisited] = useState(false);
 
@@ -19,6 +19,7 @@ const Countrie = ({countrie, markHandel}) => {
             <button onClick={clickHandel}>{visited ? 'Visited' : 'Going'}</button>
             <p>{visited ? 'I already Visit' : 'I have to plane'}</p>
             <button onClick={() => markHandel(countrie)}>Mark Visit</button>
+            <button onClick={() => flagHandel(countrie.flags.png)}>Add Flag</button>
         </div>
     );
 };
